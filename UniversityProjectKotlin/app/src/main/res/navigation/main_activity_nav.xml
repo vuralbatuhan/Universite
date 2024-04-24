@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anaSayfaFragment">
+
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.example.universityprojectkotlin.fragment.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_universityFragment1"
+            app:destination="@id/universityFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/universityFragment1"
+        android:name="com.example.universityprojectkotlin.fragment.UniversityFragment1"
+        android:label="fragment_university1"
+        tools:layout="@layout/fragment_university1" >
+        <action
+            android:id="@+id/action_universityFragment1_to_universityFragment2"
+            app:destination="@id/universityFragment2" />
+        <action
+            android:id="@+id/action_universityFragment1_to_favouriteUniversityFragment"
+            app:destination="@id/favouriteUniversityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/universityFragment2"
+        android:name="com.example.universityprojectkotlin.fragment.UniversityFragment2"
+        android:label="fragment_university2"
+        tools:layout="@layout/fragment_university2" >
+        <action
+            android:id="@+id/action_universityFragment2_to_universityFragment3"
+            app:destination="@id/universityFragment3" />
+        <action
+            android:id="@+id/action_universityFragment2_to_favouriteUniversityFragment"
+            app:destination="@id/favouriteUniversityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/universityFragment3"
+        android:name="com.example.universityprojectkotlin.fragment.UniversityFragment3"
+        android:label="fragment_university3"
+        tools:layout="@layout/fragment_university3" >
+        <action
+            android:id="@+id/action_universityFragment3_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment" />
+        <action
+            android:id="@+id/action_universityFragment3_to_favouriteUniversityFragment"
+            app:destination="@id/favouriteUniversityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteUniversityFragment"
+        android:name="com.example.universityprojectkotlin.fragment.FavouriteUniversityFragment"
+        android:label="fragment_favourite_university"
+        tools:layout="@layout/fragment_favourite_university" />
+</navigation>
